@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaPersonBooth, FaSearch, FaUser } from "react-icons/fa";
+import { FaCarAlt, FaCartArrowDown, FaCartPlus, FaPersonBooth, FaSearch, FaUser } from "react-icons/fa";
 import "../styles/Navbar/Navbar.css";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -48,7 +48,7 @@ const Navbar = () => {
 
         <div className="navbar__sign">
           <button className="navbar__register-button">
-              {localStorage.getItem("authToken") ? <FaUser style={{ borderRadius: "50%" }} /> : <Link className="navbar__link" to="/register">
+              {localStorage.getItem("authToken") ? <FaCartArrowDown style={{ borderRadius: "50%" }} /> : <Link className="navbar__link" to="/register">
               Sign Up
             </Link>}
             
