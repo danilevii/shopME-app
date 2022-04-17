@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/v1/auth", require("./routes/auth"));
+app.use("/api/v1/product", require("./routes/product"));
 
 app.get("/welcome", auth, (req, res) => {
     res.status(200).send("Welcome ");

@@ -12,3 +12,5 @@ const productSchema = new mongoose.Schema({
     required: [true, "Enter a product image"],
   },
 });
+
+module.exports = mongoose.model("product", productSchema);
