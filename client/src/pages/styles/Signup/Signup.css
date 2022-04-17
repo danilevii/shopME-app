@@ -1,0 +1,102 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+.signup__form {
+  width: 800px;
+  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: 8px solid;
+  -o-border-image: linear-gradient(45deg, #1aa078, #160d63) 1;
+     border-image: linear-gradient(45deg, #1aa078, #160d63) 1;
+}
+
+.signup__form-title {
+  font-size: 46px;
+  text-align: center;
+}
+
+.signup__error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #b92222;
+  height: 6%;
+}
+
+label {
+  font-size: 24px;
+  padding: 8px 20px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 0 8px;
+  font-size: 24px;
+  width: 95%;
+  height: 48px;
+  border: none;
+  outline: none;
+}
+
+button {
+  margin-bottom: 20px;
+  height: 40px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 40%;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  color: #2c2626;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #d4bfbf;
+}
+/*# sourceMappingURL=Signup.css.map */
