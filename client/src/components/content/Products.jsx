@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { FaCartPlus, FaList } from "react-icons/fa";
 import "../styles/Products/Products.css";
 import { getDownloadURL } from "firebase/storage";
 import { storage, app } from "../../firebase";
@@ -37,6 +38,14 @@ const Products = () => {
                 src={item.image}
                 alt="item-img"
               />
+              <div className="icon-container">
+                <div className="cart-icon__container">
+                  <FaCartPlus className="cart-icon" />
+                </div>
+                <div className="list-icon__container">
+                  <FaList className="list-icon" />
+                </div>
+              </div>
             </div>
           </Link>
         ))}
