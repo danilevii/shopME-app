@@ -6,18 +6,18 @@ export const cartSlice = createSlice({
         value: 0,
     },
     reducers: {
-        increment: (state) => {
+        incrementCart: (state) => {
             state.value += 1
         },
-        decrement: (state) => {
+        decrementCart: (state) => {
             state.value -= 1;
         },
-        empty: (state) => {
+        emptyCart: (state) => {
             state.value = 0;
         }
     }
 })
 
-export const { increment, decrement, empty } = cartSlice.actions;
+export const { incrementCart, decrementCart, emptyCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

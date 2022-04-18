@@ -5,12 +5,14 @@ import "../styles/Products/Products.css";
 import { getDownloadURL } from "firebase/storage";
 import { storage, app } from "../../firebase";
 import { Link } from "react-router-dom";
-import { increment } from '../../cart/reducers/cartSlice'
+import { incrementCart } from '../../cart/reducers/cartSlice'
+import { incrementWishlist } from "../../cart/reducers/wishlistSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const cart = useSelector((state) => state.cart.value)
+  const wishlist = useSelector((state) => state.wishlist);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -44,10 +46,10 @@ const Products = () => {
               />
               <div className="icon-container">
                 <div className="cart-icon__container">
-                  <FaCartPlus className="cart-icon" onClick={() => dispatch(increment())} />
+                  <FaCartPlus className="cart-icon" onClick={() => dispatch(incrementCart())} />
                 </div>
                 <div className="list-icon__container">
-                  <FaList className="list-icon" />
+                  <FaList onClick={() => dispatch(incrementWishlist())} className="list-icon" />
                 </div>
               </div>
             </div>
