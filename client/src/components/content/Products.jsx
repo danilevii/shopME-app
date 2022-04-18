@@ -5,9 +5,13 @@ import "../styles/Products/Products.css";
 import { getDownloadURL } from "firebase/storage";
 import { storage, app } from "../../firebase";
 import { Link } from "react-router-dom";
+import { increment } from '../../cart/reducers/cartSlice'
+import { useDispatch, useSelector } from "react-redux";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const cart = useSelector((state) => state.cart.value)
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,7 +44,7 @@ const Products = () => {
               />
               <div className="icon-container">
                 <div className="cart-icon__container">
-                  <FaCartPlus className="cart-icon" />
+                  <FaCartPlus className="cart-icon" onClick={() => dispatch(increment())} />
                 </div>
                 <div className="list-icon__container">
                   <FaList className="list-icon" />

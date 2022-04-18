@@ -58,6 +58,7 @@
   font-family: "Poppins", sans-serif;
   font-size: 22px;
   margin-left: 8px;
+  max-width: 100px;
 }
 
 .products__item-price {
@@ -66,12 +67,18 @@
 }
 
 .products__item-img {
-  margin: 0px 10px;
-  max-width: 220px;
-  max-height: 220px;
+  margin: 0px 70px;
+  margin-left: 10px;
+  min-width: 200px;
+  max-width: 200px;
+  max-height: 200px;
+  min-height: 200px;
 }
 
 .icon-container {
+  position: absolute;
+  -webkit-transform: translate(180px);
+          transform: translate(180px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,6 +95,7 @@
 }
 
 .cart-icon__container {
+  text-align: center;
   border: 2px solid black;
   border-radius: 50vh;
   padding: 10px;
@@ -102,10 +110,12 @@
 }
 
 .cart-icon {
+  text-align: center;
   font-size: 1.5rem;
 }
 
 .list-icon__container {
+  text-align: center;
   border: 2px solid black;
   border-radius: 50vh;
   padding: 10px;
@@ -120,6 +130,7 @@
 }
 
 .list-icon {
+  text-align: center;
   font-size: 1.5rem;
 }
 /*# sourceMappingURL=Products.css.map */
