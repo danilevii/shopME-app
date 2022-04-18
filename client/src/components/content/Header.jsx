@@ -15,7 +15,8 @@ const Header = () => {
         Sell on shopME with no prior selling experience.
       </h1>
       <div className="header__button-container">
-        <button className="header__button"><Link className="header__link" to='/create-listing'>Create a Listing</Link></button>
+        {localStorage.getItem("authToken") ? <button className="header__button"><Link className="header__link" to='/create-listing'>Create a Listing</Link></button> : <button className="header__button"><Link className="header__link" to='/register'>Create a Listing</Link></button>}
+        
       </div>
       <hr></hr>
     </div>

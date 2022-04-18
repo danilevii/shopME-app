@@ -11,6 +11,7 @@ function App() {
           <Route path='/' element={<LandingPage />} />
           <Route path='/register' element={<Signup />} />
           <Route path='/create-listing' element={<NewListing />} />
+          <Route path='/product/:id' element={<Signup />} />
         </Routes>
       </Router>
     </div>

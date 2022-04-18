@@ -111,6 +111,7 @@ const NewListing = () => {
             required
           />
         </label>
+        <h3>Image Upload {progress}%</h3>
         <button type="submit">Submit</button>
       </form>
     </div>

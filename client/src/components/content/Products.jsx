@@ -3,6 +3,7 @@ import axios from "axios";
 import "../styles/Products/Products.css";
 import { getDownloadURL } from "firebase/storage";
 import { storage, app } from "../../firebase";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -16,27 +17,30 @@ const Products = () => {
       const productsList = getProducts.data.products;
 
       setProducts(productsList);
-
-      const storage = app.storage();
-
-      storage
-        .ref(`${productsList.image}`)
-        .getDownloadURL()
-        .then((url) => {
-          console.log(url);
-        });
     };
     fetchData();
   }, []);
 
   return (
-    <div className="products">
-      {products.map((item) => (
-        <div className="products__items" key={item.id}>
-          <div className="products__item-name">{item.name}</div>
-          <img src={item.img} alt="item-img" />
-        </div>
-      ))}
+    <div className="title">
+      <h1 className="products__title">Products</h1>
+      <div className="products">
+        {products.map((item) => (
+          <Link className="products__link" to={`/product/${item._id}`}>
+            <div className="products__items" key={item._id}>
+              <div className="products__item-info">
+                <div className="products__item-name">{item.name}</div>
+                <div className="products__item-price">${item.price}</div>
+              </div>
+              <img
+                className="products__item-img"
+                src={item.image}
+                alt="item-img"
+              />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
