@@ -1,6 +1,5 @@
 import React from 'react'
-import { Header } from '../../components'
-import Products from '../../components/content/Products'
+import { Header, Products } from '../../components'
 
 const LandingPage = () => {
   return (

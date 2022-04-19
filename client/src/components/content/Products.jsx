@@ -5,8 +5,8 @@ import "../styles/Products/Products.css";
 import { getDownloadURL } from "firebase/storage";
 import { storage, app } from "../../firebase";
 import { Link } from "react-router-dom";
-import { incrementCart } from '../../cart/reducers/cartSlice'
-import { incrementWishlist } from "../../cart/reducers/wishlistSlice";
+import { incrementCart } from '../../redux/reducers/cartSlice'
+import { incrementWishlist } from "../../redux/reducers/wishlistSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Products = () => {
