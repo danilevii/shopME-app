@@ -22,8 +22,10 @@ const Product = () => {
           "http://localhost:5000/api/v1/product/" + id
         );
         setProduct(res.data.product[0]);
-        console.log(product);
-      } catch (error) {}
+        console.log(res.data);
+      } catch (error) {
+          console.log(error);
+      }
     };
     getProduct();
   }, []);

@@ -46,7 +46,7 @@
   padding-top: 10px;
   padding-bottom: 15px;
   font-size: 22px;
-  border-bottom: 4px solid lightgray;
+  border-bottom: 4px solid black;
   width: 600px;
 }
 
@@ -62,7 +62,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-right: 4px solid black;
+  border-right: 4px solid #b1acac;
 }
 
 .product__image {
